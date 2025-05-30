@@ -1,0 +1,3 @@
+/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/Gem.dir
+/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/edit_cache.dir
+/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/rebuild_cache.dir

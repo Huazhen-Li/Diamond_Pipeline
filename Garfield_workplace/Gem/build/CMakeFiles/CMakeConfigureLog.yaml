@@ -1,0 +1,828 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Darwin - 24.5.0 - arm64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang 
+      Build flags: -ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is Clang, found in:
+        /Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/4.0.2/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting C compiler apple sysroot: "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang" "-ftree-vectorize" "-fPIC" "-fstack-protector-strong" "-O2" "-pipe" "-isystem" "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include" "-E" "apple-sdk.c"
+        # 1 "apple-sdk.c"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 447 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.c" 2
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 89 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 90 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 91 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 207 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 196 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 197 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 33 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 198 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 35 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 2 3 4
+        # 199 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 208 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.c" 2
+        
+        
+      Found apple sysroot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang++ 
+      Build flags: -ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is Clang, found in:
+        /Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/4.0.2/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting CXX compiler apple sysroot: "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang++" "-ftree-vectorize" "-fPIC" "-fstack-protector-strong" "-O2" "-pipe" "-stdlib=libc++" "-fvisibility-inlines-hidden" "-fmessage-length=0" "-isystem" "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include" "-E" "apple-sdk.cpp"
+        # 1 "apple-sdk.cpp"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 510 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.cpp" 2
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 89 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 90 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 91 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 207 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 196 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 197 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 33 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 198 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 35 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 2 3 4
+        # 199 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 208 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.cpp" 2
+        
+        
+      Found apple sysroot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-OKrTSU"
+      binary: "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-OKrTSU"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: "-ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-OKrTSU'
+        
+        Run Build Command(s): /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4c046/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_4c046.dir/build.make CMakeFiles/cmTC_4c046.dir/build
+        Building C object CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0   -v -Wl,-v -MD -MT CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeCCompilerABI.c
+        clang version 18.1.8
+        Target: arm64-apple-darwin20.0.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin
+        arm64-apple-darwin20.0: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         (in-process)
+         "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/clang-18" -cc1 -triple arm64-apple-macosx11.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.5 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +complxnum -target-feature +fp-armv8 -target-feature +fullfp16 -target-feature +fp16fml -target-feature +jsconv -target-feature +lse -target-feature +pauth -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-OKrTSU -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-OKrTSU -resource-dir /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18 -dependency-file CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o -sys-header-deps -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -ferror-limit 19 -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target arm64-apple-darwin24.5.0
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include
+         /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        Linking C executable cmTC_4c046
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c046.dir/link.txt --verbose=1
+        clang version 18.1.8
+        Target: arm64-apple-darwin20.0.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin
+         "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 11.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_4c046 -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -v CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o -lSystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:ld64-951.9
+        BUILD 16:55:20 Apr  5 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        Library search paths:
+        	/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -v -Wl,-v CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o -o cmTC_4c046
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include]
+          add: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        end of search list found
+        collapse include dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include]
+        collapse include dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        implicit include dirs: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include;/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-OKrTSU']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4c046/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_4c046.dir/build.make CMakeFiles/cmTC_4c046.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0   -v -Wl -v -MD -MT CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: arm64-apple-darwin20.0.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin]
+        ignore line: [arm64-apple-darwin20.0: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ (in-process)]
+        ignore line: [ "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/clang-18" -cc1 -triple arm64-apple-macosx11.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.5 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +complxnum -target-feature +fp-armv8 -target-feature +fullfp16 -target-feature +fp16fml -target-feature +jsconv -target-feature +lse -target-feature +pauth -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-OKrTSU -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-OKrTSU -resource-dir /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18 -dependency-file CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o -sys-header-deps -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -ferror-limit 19 -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target arm64-apple-darwin24.5.0]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include]
+        ignore line: [ /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking C executable cmTC_4c046]
+        ignore line: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c046.dir/link.txt --verbose=1]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: arm64-apple-darwin20.0.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin]
+        link line: [ "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 11.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_4c046 -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -v CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o -lSystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/libLTO.18.1.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [11.0.0] ==> ignore
+          arg [15.5] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_4c046] ==> ignore
+          arg [-L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-dead_strip_dylibs] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lSystem] ==> lib [System]
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        ignore line: [@(#)PROGRAM:ld  PROJECT:ld64-951.9]
+        ignore line: [BUILD 16:55:20 Apr  5 2025]
+        ignore line: [configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)]
+        ignore line: [Library search paths:]
+        ignore line: [	/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        ignore line: [	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        ignore line: [Framework search paths:]
+        ignore line: [	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        ignore line: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -v -Wl -v CMakeFiles/cmTC_4c046.dir/CMakeCCompilerABI.c.o -o cmTC_4c046]
+        ignore line: []
+        ignore line: []
+        Library search paths: [;/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        remove lib [System]
+        remove lib [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        collapse library dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-769vg7"
+      binary: "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-769vg7"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-769vg7'
+        
+        Run Build Command(s): /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2ca08/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2ca08.dir/build.make CMakeFiles/cmTC_2ca08.dir/build
+        Building CXX object CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0   -v -Wl,-v -MD -MT CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp
+        clang version 18.1.8
+        Target: arm64-apple-darwin20.0.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin
+        arm64-apple-darwin20.0: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         (in-process)
+         "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/clang-18" -cc1 -triple arm64-apple-macosx11.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.5 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +complxnum -target-feature +fp-armv8 -target-feature +fullfp16 -target-feature +fp16fml -target-feature +jsconv -target-feature +lse -target-feature +pauth -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-769vg7 -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-769vg7 -resource-dir /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18 -dependency-file CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target arm64-apple-darwin24.5.0
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include
+         /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/../include/c++/v1
+         /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        Linking CXX executable cmTC_2ca08
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ca08.dir/link.txt --verbose=1
+        clang version 18.1.8
+        Target: arm64-apple-darwin20.0.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin
+         "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 11.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_2ca08 -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -v CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:ld64-951.9
+        BUILD 16:55:20 Apr  5 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        Library search paths:
+        	/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -v -Wl,-v CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2ca08
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include]
+          add: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/../include/c++/v1]
+          add: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        end of search list found
+        collapse include dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include]
+        collapse include dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/../include/c++/v1] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include/c++/v1]
+        collapse include dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        implicit include dirs: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include;/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include/c++/v1;/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-769vg7']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2ca08/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2ca08.dir/build.make CMakeFiles/cmTC_2ca08.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0   -v -Wl -v -MD -MT CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: arm64-apple-darwin20.0.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin]
+        ignore line: [arm64-apple-darwin20.0: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ (in-process)]
+        ignore line: [ "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/clang-18" -cc1 -triple arm64-apple-macosx11.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=15.5 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +complxnum -target-feature +fp-armv8 -target-feature +fullfp16 -target-feature +fp16fml -target-feature +jsconv -target-feature +lse -target-feature +pauth -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-769vg7 -target-linker-version 951.9 -v -fcoverage-compilation-dir=/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-769vg7 -resource-dir /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18 -dependency-file CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target arm64-apple-darwin24.5.0]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include]
+        ignore line: [ /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/../include/c++/v1]
+        ignore line: [ /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_2ca08]
+        ignore line: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ca08.dir/link.txt --verbose=1]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: arm64-apple-darwin20.0.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin]
+        link line: [ "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 11.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_2ca08 -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -v CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/libLTO.18.1.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [11.0.0] ==> ignore
+          arg [15.5] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_2ca08] ==> ignore
+          arg [-L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-dead_strip_dylibs] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        ignore line: [@(#)PROGRAM:ld  PROJECT:ld64-951.9]
+        ignore line: [BUILD 16:55:20 Apr  5 2025]
+        ignore line: [configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)]
+        ignore line: [Library search paths:]
+        ignore line: [	/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        ignore line: [	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        ignore line: [Framework search paths:]
+        ignore line: [	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        ignore line: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -v -Wl -v CMakeFiles/cmTC_2ca08.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2ca08]
+        ignore line: []
+        ignore line: []
+        Library search paths: [;/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        remove lib [System]
+        remove lib [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        collapse library dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: [c++]
+        implicit objs: []
+        implicit dirs: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_base/install/lib/cmake/Garfield/GarfieldConfig.cmake:38 (find_dependency)"
+      - "CMakeLists.txt:5 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-YhirOg"
+      binary: "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-YhirOg"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: "-ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib"
+      CMAKE_MODULE_PATH: "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/cmake/modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_fopenmplibomp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-YhirOg'
+        
+        Run Build Command(s): /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5ca21/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5ca21.dir/build.make CMakeFiles/cmTC_5ca21.dir/build
+        Building C object CMakeFiles/cmTC_5ca21.dir/OpenMPTryFlag.c.o
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -fopenmp=libomp -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -MD -MT CMakeFiles/cmTC_5ca21.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_5ca21.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_5ca21.dir/OpenMPTryFlag.c.o -c /Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-YhirOg/OpenMPTryFlag.c
+        Linking C executable cmTC_5ca21
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ca21.dir/link.txt --verbose=1
+        clang version 18.1.8
+        Target: arm64-apple-darwin20.0.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin
+         "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 11.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_5ca21 -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -v CMakeFiles/cmTC_5ca21.dir/OpenMPTryFlag.c.o -lomp -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -lSystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:ld64-951.9
+        BUILD 16:55:20 Apr  5 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        Library search paths:
+        	/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib
+        	/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -fopenmp=libomp -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib  -v -Wl,-v CMakeFiles/cmTC_5ca21.dir/OpenMPTryFlag.c.o -o cmTC_5ca21
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/FindOpenMP.cmake:294 (message)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_base/install/lib/cmake/Garfield/GarfieldConfig.cmake:38 (find_dependency)"
+      - "CMakeLists.txt:5 (find_package)"
+    message: |
+      Parsed C OpenMP implicit link information from above output:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-YhirOg']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5ca21/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5ca21.dir/build.make CMakeFiles/cmTC_5ca21.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_5ca21.dir/OpenMPTryFlag.c.o]
+        ignore line: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -fopenmp=libomp -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -MD -MT CMakeFiles/cmTC_5ca21.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_5ca21.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_5ca21.dir/OpenMPTryFlag.c.o -c /Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-YhirOg/OpenMPTryFlag.c]
+        ignore line: [Linking C executable cmTC_5ca21]
+        ignore line: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ca21.dir/link.txt --verbose=1]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: arm64-apple-darwin20.0.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin]
+        link line: [ "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 11.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_5ca21 -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -v CMakeFiles/cmTC_5ca21.dir/OpenMPTryFlag.c.o -lomp -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -lSystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/libLTO.18.1.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [11.0.0] ==> ignore
+          arg [15.5] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_5ca21] ==> ignore
+          arg [-L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-dead_strip_dylibs] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_5ca21.dir/OpenMPTryFlag.c.o] ==> ignore
+          arg [-lomp] ==> lib [omp]
+          arg [-L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+          arg [-lSystem] ==> lib [System]
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        Library search paths: [;/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib;/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        remove lib [System]
+        remove lib [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        collapse library dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        collapse library dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        collapse library dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: [omp]
+        implicit objs: []
+        implicit dirs: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_base/install/lib/cmake/Garfield/GarfieldConfig.cmake:38 (find_dependency)"
+      - "CMakeLists.txt:5 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-czuDD7"
+      binary: "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-czuDD7"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib"
+      CMAKE_MODULE_PATH: "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/cmake/modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_fopenmplibomp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-czuDD7'
+        
+        Run Build Command(s): /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_eacf6/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_eacf6.dir/build.make CMakeFiles/cmTC_eacf6.dir/build
+        Building CXX object CMakeFiles/cmTC_eacf6.dir/OpenMPTryFlag.cpp.o
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -fopenmp=libomp -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -MD -MT CMakeFiles/cmTC_eacf6.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_eacf6.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_eacf6.dir/OpenMPTryFlag.cpp.o -c /Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-czuDD7/OpenMPTryFlag.cpp
+        Linking CXX executable cmTC_eacf6
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eacf6.dir/link.txt --verbose=1
+        clang version 18.1.8
+        Target: arm64-apple-darwin20.0.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin
+         "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 11.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_eacf6 -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -v CMakeFiles/cmTC_eacf6.dir/OpenMPTryFlag.cpp.o -lomp -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -lc++ -lSystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:ld64-951.9
+        BUILD 16:55:20 Apr  5 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        Library search paths:
+        	/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib
+        	/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -fopenmp=libomp -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib  -v -Wl,-v CMakeFiles/cmTC_eacf6.dir/OpenMPTryFlag.cpp.o -o cmTC_eacf6
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/FindOpenMP.cmake:294 (message)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_base/install/lib/cmake/Garfield/GarfieldConfig.cmake:38 (find_dependency)"
+      - "CMakeLists.txt:5 (find_package)"
+    message: |
+      Parsed CXX OpenMP implicit link information from above output:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-czuDD7']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_eacf6/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_eacf6.dir/build.make CMakeFiles/cmTC_eacf6.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_eacf6.dir/OpenMPTryFlag.cpp.o]
+        ignore line: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -fopenmp=libomp -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -MD -MT CMakeFiles/cmTC_eacf6.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_eacf6.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_eacf6.dir/OpenMPTryFlag.cpp.o -c /Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-czuDD7/OpenMPTryFlag.cpp]
+        ignore line: [Linking CXX executable cmTC_eacf6]
+        ignore line: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eacf6.dir/link.txt --verbose=1]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: arm64-apple-darwin20.0.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin]
+        link line: [ "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-ld" -demangle -lto_library /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/libLTO.18.1.dylib -dynamic -arch arm64 -platform_version macos 11.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_eacf6 -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -v CMakeFiles/cmTC_eacf6.dir/OpenMPTryFlag.cpp.o -lomp -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -lc++ -lSystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/libLTO.18.1.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [11.0.0] ==> ignore
+          arg [15.5] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_eacf6] ==> ignore
+          arg [-L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-dead_strip_dylibs] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_eacf6.dir/OpenMPTryFlag.cpp.o] ==> ignore
+          arg [-lomp] ==> lib [omp]
+          arg [-L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        Library search paths: [;/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib;/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        remove lib [System]
+        remove lib [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        collapse library dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        collapse library dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        collapse library dir [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib] ==> [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: [omp;c++]
+        implicit objs: []
+        implicit dirs: [/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_base/install/lib/cmake/Garfield/GarfieldConfig.cmake:38 (find_dependency)"
+      - "CMakeLists.txt:5 (find_package)"
+    description: "Detecting C OpenMP version"
+    directories:
+      source: "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-Ta3oDK"
+      binary: "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-Ta3oDK"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: "-ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib"
+      CMAKE_MODULE_PATH: "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/cmake/modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "OpenMP_SPECTEST_C_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-Ta3oDK'
+        
+        Run Build Command(s): /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_cff29/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_cff29.dir/build.make CMakeFiles/cmTC_cff29.dir/build
+        Building C object CMakeFiles/cmTC_cff29.dir/OpenMPCheckVersion.c.o
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -fopenmp=libomp -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -MD -MT CMakeFiles/cmTC_cff29.dir/OpenMPCheckVersion.c.o -MF CMakeFiles/cmTC_cff29.dir/OpenMPCheckVersion.c.o.d -o CMakeFiles/cmTC_cff29.dir/OpenMPCheckVersion.c.o -c /Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-Ta3oDK/OpenMPCheckVersion.c
+        Linking C executable cmTC_cff29
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cff29.dir/link.txt --verbose=1
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -fopenmp=libomp -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib  CMakeFiles/cmTC_cff29.dir/OpenMPCheckVersion.c.o -o cmTC_cff29
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_base/install/lib/cmake/Garfield/GarfieldConfig.cmake:38 (find_dependency)"
+      - "CMakeLists.txt:5 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-IMn81a"
+      binary: "/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-IMn81a"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib"
+      CMAKE_MODULE_PATH: "/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/cmake/modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-IMn81a'
+        
+        Run Build Command(s): /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_11178/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_11178.dir/build.make CMakeFiles/cmTC_11178.dir/build
+        Building CXX object CMakeFiles/cmTC_11178.dir/OpenMPCheckVersion.cpp.o
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang++   -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -fopenmp=libomp -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -MD -MT CMakeFiles/cmTC_11178.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_11178.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_11178.dir/OpenMPCheckVersion.cpp.o -c /Users/lihuazhen/Downloads/Diamond_Pipeline/Diamond_Pipeline/Garfield_workplace/Gem/build/CMakeFiles/CMakeScratch/TryCompile-IMn81a/OpenMPCheckVersion.cpp
+        Linking CXX executable cmTC_11178
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11178.dir/link.txt --verbose=1
+        /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /opt/homebrew/Caskroom/miniforge/base/envs/huazhen/include -fopenmp=libomp -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib -L/opt/homebrew/Caskroom/miniforge/base/envs/huazhen/lib  CMakeFiles/cmTC_11178.dir/OpenMPCheckVersion.cpp.o -o cmTC_11178
+        
+      exitCode: 0
+...
