@@ -22,14 +22,15 @@
 #include "TTree.h"
 
 #include <vector>
+#include <iomanip>
 #include "TMath.h"
 
 #include "Garfield/MediumDiamond.hh"
-#include "Garfield/MediumSilicon.hh"
+
 #include "Garfield/MediumConductor.hh"
 #include "Garfield/ComponentTcad3d.hh"
 #include "Garfield/Sensor.hh"
-#include "Garfield/TrackHeed.hh"
+
 #include "Garfield/AvalancheMC.hh"
 #include "Garfield/FundamentalConstants.hh"
 #include "Garfield/Random.hh"
@@ -50,7 +51,7 @@ std::vector<double> current_column_data;
 double current_hcenter = -999;
 
 void LOAD_COLUMN(double hcenter_um) {
-    // 如果已经加载了这个Hcenter的数据，就不用重新加载
+    // If data for this Hcenter is already loaded, no need to reload
     if (abs(current_hcenter - hcenter_um) < 1e-6) {
         return;
     }
@@ -64,29 +65,29 @@ void LOAD_COLUMN(double hcenter_um) {
     std::string line;
     int target_col = -1;
     
-    // 跳过注释行，找到头部行（包含z_um,-50.0,-49.0,...的行）
+    // Skip comment lines and find header row (containing z_um,-50.0,-49.0,... columns)
     while (getline(file, line)) {
         if (line.find("z_um,") != std::string::npos) {
-            // 这是头部行，解析找到Hcenter对应的列
+            // This is the header row, parse to find the column corresponding to Hcenter
             std::stringstream ss(line);
             std::string cell;
             int col_index = 0;
             
             while (getline(ss, cell, ',')) {
                 if (col_index == 0) {
-                    // 跳过第一列（z_um）
+                    // Skip first column (z_um)
                     col_index++;
                     continue;
                 }
                 
                 try {
-                    double h_val = std::stod(cell); // CSV中的值已经是μm
+                    double h_val = std::stod(cell); // Values in CSV are already in μm
                     if (abs(h_val - hcenter_um) < 1e-6) {
                         target_col = col_index;
                         break;
                     }
                 } catch (const std::exception& e) {
-                    // 跳过无法解析的单元格
+                    // Skip cells that cannot be parsed
                 }
                 col_index++;
             }
@@ -100,12 +101,12 @@ void LOAD_COLUMN(double hcenter_um) {
         return;
     }
     
-    // 清空当前数据
+    // Clear current data
     current_column_data.clear();
     
-    // 读取所有数据行，提取目标列
+    // Read all data rows and extract target column
     while (getline(file, line)) {
-        // 跳过空行和注释行
+        // Skip empty lines and comment lines
         if (line.empty() || line[0] == '#') continue;
         
         std::stringstream ss2(line);
@@ -142,15 +143,17 @@ int main(int argc, char * argv[]) {
 
   TApplication app("app", &argc, argv);
   
-  // Get x0, y0 from command line arguments
-  if (argc < 3) {
-      std::cerr << "Usage: " << argv[0] << " <x0> <y0>" << std::endl;
+  // Get x0, y0, time_step from command line arguments
+  if (argc < 4) {
+      std::cerr << "Usage: " << argv[0] << " <x0> <y0> <time_step>" << std::endl;
       std::cerr << "  x0, y0: beam position in micrometers" << std::endl;
+      std::cerr << "  time_step: time interval in nanoseconds" << std::endl;
       return 1;
   }
   
   const double x0 = std::stod(argv[1]) * 1e-4;  // Convert μm to cm
   const double y0 = std::stod(argv[2]) * 1e-4;  // Convert μm to cm
+  const double time_step = std::stod(argv[3]);  // Time step in ns
 
   // Fixed simulation parameters  
   const double zm = 500.e-4;    // Sensor thickness: 500μm = 0.05cm
@@ -160,44 +163,62 @@ int main(int argc, char * argv[]) {
   CVD.SetTemperature(293.15);
   MediumConductor metal;
   metal.SetTemperature(293.15);
-  MediumSilicon Silicon;
-  Silicon.SetTemperature(293.15);
+
 
  
 
-  // Import a two-dimensional TCAD field map.
-  ComponentTcad3d fm;
-  // Load the mesh (.grd file) and electric field (.dat).
-  fm.Initialise("/tmp/c4_f/n1260_des.grd", "/tmp/c4_f/n1260_des.dat");
-  fm.SetWeightingField("/tmp/c4_f/n1260_des.dat", "/tmp/c4_f/n1269_des.dat", 10.0, "SIGN");
+  // Define timing and readout label
+  std::vector<double> times;
+  // Generate 21 time points using specified time step
+  for (int i = 0; i < 21; ++i) {
+    times.push_back(i * time_step); // 0, time_step, 2*time_step, ..., 20*time_step ns
+  }
+  const std::string label = "sign";
+  
+  // Import a 3D TCAD field map
+  ComponentTcad3d 3DDiamond;
+  // Load the mesh (.grd file) and electric field (.dat)
+  3DDiamond.Initialise("/tmp/DWF_Huazhen/nominal_c4_f.grd", "/tmp/DWF_Huazhen/nominal_c4_f.dat");
+  
+  // Load dynamic weighting field maps for different time points
+  std::cout << "Loading " << times.size() << " weighting field maps..." << std::endl;
+  for (int tt = 0; tt < times.size(); ++tt) {
+    
+    const std::string wpFileName = "/tmp/DWF_Huazhen/weighting_c4_f_t" + std::to_string(tt) + ".dat";
+    std::cout << "  Loading time " << times[tt] << " ns: " << wpFileName << std::endl;
+    
+    3DDiamond.SetDynamicWeightingPotential("/tmp/DWF_Huazhen/pure0.dat", wpFileName,
+                                           1.0, times[tt], label);
+  }
+  std::cout << "All weighting fields loaded successfully." << std::endl;
+  
+  // Associate the regions in the field map with medium objects
+  auto nRegions = 3DDiamond.GetNumberOfRegions();
+  std::cout << "Number of regions: " << nRegions << std::endl;
+  
+  // Set medium for different regions
   
   // Associate the silicon regions in the field map with a medium object. 
-  auto nRegions = fm.GetNumberOfRegions();
+  auto nRegions = 3DDiamond.GetNumberOfRegions();
   std::cout<<nRegions<<std::endl;
-  //for (size_t i = 0; i < nRegions; ++i) {
-  //  fm.SetMedium(i, &CVD);
-  //}
-  fm.SetMedium("Anysemiconductor", &CVD);
-  fm.SetMedium("Contact", &metal);
+
+  3DDiamond.SetMedium("Diamond", &CVD);
+  3DDiamond.SetMedium("Graphite", &metal);
 
   Sensor sensor;
-  sensor.AddComponent(&fm);
-  sensor.AddElectrode(&fm, "SIGN");
-  sensor.AddElectrode(&fm, "BIAS");
+  sensor.AddComponent(&3DDiamond);
+  sensor.AddElectrode(&3DDiamond, "bias");  // Use the label for dynamic weighting
+  sensor.AddElectrode(&3DDiamond, "sign"); 
+  sensor.AddElectrode(&3DDiamond, "BULK+junc1BULK");
+  sensor.AddElectrode(&3DDiamond, "junc5BULK+BULK");  
 
   const int nSignalBins = 2000;
   const double tStep = 0.005;
   sensor.SetTimeWindow(0., tStep, nSignalBins);
-  sensor.SetTransferFunction(transfer);
+  // sensor.SetTransferFunction(transfer);
   // Threshold.
   const double thr1 = -1. * ElementaryCharge;  
   std::cout << "Threshold: " << thr1 << " fC\n";
-
-  // Charged-particle track.
-  TrackHeed track;
-  track.SetSensor(&sensor);
-  track.SetParticle("pi");
-  track.SetMomentum(180.e9);
 
   // Electron/hole transport.
   AvalancheMC drift;
@@ -222,6 +243,7 @@ int main(int argc, char * argv[]) {
   std::cout << "Running simulation for " << nEvents << " Hcenter values from " 
             << hcenter_values[0] << " μm to " << hcenter_values.back() << " μm" << std::endl;
   std::cout << "Beam position: x0 = " << x0*1e6 << " μm, y0 = " << y0*1e6 << " μm" << std::endl;
+  std::cout << "Time window: 0 to " << (times.size()-1) * time_step << " ns (step: " << time_step << " ns)" << std::endl;
 
 for (unsigned int j = 0; j < nEvents; ++j) {
 
@@ -231,7 +253,7 @@ for (unsigned int j = 0; j < nEvents; ++j) {
     const double Hcenter_um = hcenter_values[j];
     const double t0 = 0.0; 
 
-    // 加载这个Hcenter对应的列数据
+    // Load column data corresponding to this Hcenter
     LOAD_COLUMN(Hcenter_um);
     unsigned int nesum = 0;
     
@@ -258,16 +280,16 @@ for (unsigned int j = 0; j < nEvents; ++j) {
       }
     }
 
-    sensor.ConvoluteSignals();
+    // sensor.ConvoluteSignals();
 
     outfile << "Hcenter = " << Hcenter_um << " μm  " << "x0 = " << x0*1e4 << " μm  " << "y0 = " << y0*1e4 << " μm  "<<"TPA_carriers = "<<nesum<<" q_total = "<<nesum * ElementaryCharge<<" fC\n";
     outfile << "********************************************" << "\n";
 
     for (unsigned int i = 0; i < nSignalBins; ++i) {
       const double t = (i + 0.5) * tStep;
-      const double f = sensor.GetSignal("SIGN", i);
-      const double fe = sensor.GetElectronSignal("SIGN", i);
-      const double fh = sensor.GetIonSignal("SIGN", i);
+      const double f = sensor.GetSignal(label, i);
+      const double fe = sensor.GetElectronSignal(label, i);
+      const double fh = sensor.GetIonSignal(label, i);
 
       outfile << t << "  " << f << "  " << fe << "  " << fh << "\n";
     } 
@@ -276,6 +298,6 @@ for (unsigned int j = 0; j < nEvents; ++j) {
   outfile.close();
 
   std::cout<<"DONE !"<<std::endl;
-  app.Run(true);
+  // app.Run(true);  // Commented out to allow program to exit automatically
 
 }

@@ -40,9 +40,13 @@ X_MAX=32.5
 Y_MIN=2.5
 Y_MAX=32.5
 
-# Grid size: 8x7 = 56 points (under 60 limit)
-N_X=8
+# Grid size: 7x7 = 49 points (under 60 limit)
+N_X=7
 N_Y=7
+
+# Time step parameter for weighting field intervals (can be modified as needed)
+# Examples: 1.0 (0-20ns), 0.5 (0-10ns), 2.0 (0-40ns)
+TIME_STEP=1.0  # nanoseconds
 
 # Calculate step sizes
 X_STEP=$(echo "scale=6; ($X_MAX - $X_MIN) / ($N_X - 1)" | bc)
@@ -51,6 +55,7 @@ Y_STEP=$(echo "scale=6; ($Y_MAX - $Y_MIN) / ($N_Y - 1)" | bc)
 echo "Grid configuration:"
 echo "  X range: $X_MIN to $X_MAX μm ($N_X points, step: $X_STEP μm)"
 echo "  Y range: $Y_MIN to $Y_MAX μm ($N_Y points, step: $Y_STEP μm)"
+echo "  Time step: $TIME_STEP ns (21 points: 0 to $((20 * TIME_STEP)) ns)"
 echo "  Total jobs: $((N_X * N_Y))"
 echo
 
@@ -83,7 +88,7 @@ for i in $(seq 0 $((N_X-1))); do
             log_file="$OUTPUT_DIR/job_x${x_pos}_y${y_pos}.log"
             
             # Submit job to background
-            nohup ./build/Diamond_4p $x_pos $y_pos > "$log_file" 2>&1 &
+            nohup ./build/Diamond_4p $x_pos $y_pos $TIME_STEP > "$log_file" 2>&1 &
             job_pid=$!
             job_pids+=($job_pid)
             
@@ -106,22 +111,83 @@ echo "You can monitor progress with: tail -f $OUTPUT_DIR/*.log"
 echo
 
 completed_jobs=0
+successful_jobs=0
+failed_jobs=0
+
+# Create arrays to track job status
+declare -A job_status  # "running", "success", "failed"
+declare -A job_positions
+
+# Initialize job tracking
+job_index=0
+for i in $(seq 0 $((N_X-1))); do
+    for j in $(seq 0 $((N_Y-1))); do
+        x_pos=$(echo "scale=3; $X_MIN + $i * $X_STEP" | bc)
+        y_pos=$(echo "scale=3; $Y_MIN + $j * $Y_STEP" | bc)
+        pid=${job_pids[$job_index]}
+        job_status[$pid]="running"
+        job_positions[$pid]="x${x_pos}_y${y_pos}"
+        job_index=$((job_index + 1))
+    done
+done
+
 while [ $completed_jobs -lt $job_count ]; do
     sleep 10  # Check every 10 seconds
     
     running_jobs=0
+    
     for pid in "${job_pids[@]}"; do
-        if kill -0 $pid 2>/dev/null; then
-            running_jobs=$((running_jobs + 1))
+        if [ "${job_status[$pid]}" = "running" ]; then
+            position=${job_positions[$pid]}
+            expected_file="TPA_simulation_$position.txt"
+            log_file="$OUTPUT_DIR/job_$position.log"
+            
+            # Check if output file exists and contains "DONE!" 
+            if [ -f "$expected_file" ] && grep -q "DONE !" "$log_file" 2>/dev/null; then
+                # Task completed successfully - kill hanging process if needed
+                if kill -0 $pid 2>/dev/null; then
+                    echo "  🔄 Job $position completed but process hanging, terminating..."
+                    kill $pid 2>/dev/null
+                    sleep 2
+                    kill -9 $pid 2>/dev/null  # Force kill if needed
+                fi
+                job_status[$pid]="success"
+                successful_jobs=$((successful_jobs + 1))
+                echo "  ✓ Job $position completed successfully"
+                
+            elif kill -0 $pid 2>/dev/null; then
+                # Process still running, check for timeout (optional)
+                running_jobs=$((running_jobs + 1))
+                
+            else
+                # Process finished but no output file or "DONE!" found
+                wait $pid 2>/dev/null
+                exit_code=$?
+                
+                if [ -f "$expected_file" ]; then
+                    # File exists but no "DONE!" - might be incomplete
+                    job_status[$pid]="success"
+                    successful_jobs=$((successful_jobs + 1))
+                    echo "  ⚠️  Job $position completed (no DONE marker, but file exists)"
+                else
+                    job_status[$pid]="failed"
+                    failed_jobs=$((failed_jobs + 1))
+                    echo "  ✗ Job $position failed: exit code $exit_code, no output file"
+                fi
+            fi
         fi
     done
     
-    completed_jobs=$((job_count - running_jobs))
-    echo "Progress: $completed_jobs/$job_count jobs completed ($running_jobs still running)..."
+    completed_jobs=$((successful_jobs + failed_jobs))
+    echo "Progress: $completed_jobs/$job_count jobs finished ($successful_jobs successful, $failed_jobs failed, $running_jobs still running)..."
 done
 
 echo
-echo "=== All simulations completed! ==="
+echo "=== All simulations finished! ==="
+echo "Final results: $successful_jobs successful, $failed_jobs failed"
+if [ $failed_jobs -gt 0 ]; then
+    echo "⚠️  Some jobs failed. Check log files for details."
+fi
 
 # Step 6: Organize output files
 echo "Step 5: Organizing output files..."
