@@ -12,10 +12,15 @@ echo
 # Step 1: Compilation
 echo "Step 1: Compiling Diamond_4p..."
 
-# Create build directory if it doesn't exist
-if [ ! -d "build" ]; then
-    mkdir build
+# Clean build: remove existing build directory and create fresh one
+echo "Cleaning previous build..."
+if [ -d "build" ]; then
+    rm -rf build
+    echo "  → Removed existing build directory"
 fi
+
+mkdir build
+echo "  → Created fresh build directory"
 
 cd build
 echo "Running cmake and make..."
@@ -55,7 +60,7 @@ Y_STEP=$(echo "scale=6; ($Y_MAX - $Y_MIN) / ($N_Y - 1)" | bc)
 echo "Grid configuration:"
 echo "  X range: $X_MIN to $X_MAX μm ($N_X points, step: $X_STEP μm)"
 echo "  Y range: $Y_MIN to $Y_MAX μm ($N_Y points, step: $Y_STEP μm)"
-echo "  Time step: $TIME_STEP ns (21 points: 0 to $((20 * TIME_STEP)) ns)"
+echo "  Time step: $TIME_STEP ns (21 points: 0 to $(echo "20 * $TIME_STEP" | bc) ns)"
 echo "  Total jobs: $((N_X * N_Y))"
 echo
 

@@ -40,6 +40,7 @@
 #include "Garfield/MediumMagboltz.hh"
 
 #include "Garfield/ComponentNeBem3d.hh"
+#include "Garfield/ViewSignal.hh"
 #include <string>
 
 using namespace Garfield;
@@ -176,41 +177,61 @@ int main(int argc, char * argv[]) {
   const std::string label = "sign";
   
   // Import a 3D TCAD field map
-  ComponentTcad3d 3DDiamond;
+  ComponentTcad3d Diamond3D;
   // Load the mesh (.grd file) and electric field (.dat)
-  3DDiamond.Initialise("/tmp/DWF_Huazhen/nominal_c4_f.grd", "/tmp/DWF_Huazhen/nominal_c4_f.dat");
+  Diamond3D.Initialise("/tmp/DWF_Huazhen_c4/nominal.grd", "/tmp/DWF_Huazhen_c4/nominal.dat");
   
-  // Load dynamic weighting field maps for different time points
-  std::cout << "Loading " << times.size() << " weighting field maps..." << std::endl;
-  for (int tt = 0; tt < times.size(); ++tt) {
+  // First, set the prompt weighting field component (t=0)
+  std::cout << "Setting up prompt weighting field (t=0)..." << std::endl;
+  std::ostringstream t0_stream;
+  t0_stream << std::setfill('0') << std::setw(6) << 0;
+  const std::string wpFileName_t0 = "/tmp/DWF_Huazhen_c4/1e-3/1e-3_" + t0_stream.str() + "_des.dat";
+  std::cout << "  Loading prompt component: " << wpFileName_t0 << std::endl;
+  
+  // Set prompt weighting field for t=0 (required before dynamic weighting potentials)
+  bool prompt_success = Diamond3D.SetWeightingField("/tmp/DWF_Huazhen_c4/gnd.dat", wpFileName_t0, 1.0, label);
+  if (!prompt_success) {
+    std::cerr << "Error: Failed to set prompt weighting field component!" << std::endl;
+    return 1;
+  }
+  std::cout << "✓ Prompt weighting field component loaded successfully." << std::endl;
+  
+  // Load dynamic weighting field maps for different time points (t > 0)
+  std::cout << "Loading " << (times.size()-1) << " dynamic weighting field maps..." << std::endl;
+  for (int tt = 1; tt < times.size(); ++tt) {  // Start from tt=1, skip t=0
     
-    const std::string wpFileName = "/tmp/DWF_Huazhen/weighting_c4_f_t" + std::to_string(tt) + ".dat";
+    // Create zero-padded string for tt (e.g., 000001, 000002, ..., 000020)
+    std::ostringstream tt_stream;
+    tt_stream << std::setfill('0') << std::setw(6) << tt;
+    const std::string wpFileName = "/tmp/DWF_Huazhen_c4/1e-3/1e-3_" + tt_stream.str() + "_des.dat";
     std::cout << "  Loading time " << times[tt] << " ns: " << wpFileName << std::endl;
     
-    3DDiamond.SetDynamicWeightingPotential("/tmp/DWF_Huazhen/pure0.dat", wpFileName,
-                                           1.0, times[tt], label);
+    bool dynamic_success = Diamond3D.SetDynamicWeightingPotential("/tmp/DWF_Huazhen_c4/gnd.dat", wpFileName,
+                                                                  1.0, times[tt], label);
+    if (!dynamic_success) {
+      std::cerr << "Warning: Failed to load dynamic weighting potential for t=" << times[tt] << " ns" << std::endl;
+    }
   }
   std::cout << "All weighting fields loaded successfully." << std::endl;
   
   // Associate the regions in the field map with medium objects
-  auto nRegions = 3DDiamond.GetNumberOfRegions();
+  auto nRegions = Diamond3D.GetNumberOfRegions();
   std::cout << "Number of regions: " << nRegions << std::endl;
   
   // Set medium for different regions
+  // Only define Diamond region - leave other regions undefined to prevent drift into them
   
-  // Associate the silicon regions in the field map with a medium object. 
-  auto nRegions = 3DDiamond.GetNumberOfRegions();
-  std::cout<<nRegions<<std::endl;
-
-  3DDiamond.SetMedium("Diamond", &CVD);
-  3DDiamond.SetMedium("Graphite", &metal);
+  // Associate only the Diamond regions with a medium object
+  // Graphite regions are intentionally left undefined to prevent carrier drift
+  Diamond3D.SetMedium("Diamond", &CVD);
+  // Diamond3D.SetMedium("Graphite", &metal);  // Commented out to prevent drift into contacts
 
   Sensor sensor;
-  sensor.AddComponent(&3DDiamond);
-  sensor.AddElectrode(&3DDiamond, "bias");  // Use the label for dynamic weighting
-  sensor.AddElectrode(&3DDiamond, "sign"); 
-  sensor.AddElectrode(&3DDiamond, "BULK+junc1BULK");
-  sensor.AddElectrode(&3DDiamond, "junc5BULK+BULK");  
+  sensor.AddComponent(&Diamond3D);
+  sensor.AddElectrode(&Diamond3D, "bias");  // Use the label for dynamic weighting
+  sensor.AddElectrode(&Diamond3D, "sign"); 
+  sensor.AddElectrode(&Diamond3D, "BULK+junc1BULK");
+  sensor.AddElectrode(&Diamond3D, "junc5BULK+BULK");  
 
   const int nSignalBins = 2000;
   const double tStep = 0.005;
@@ -225,6 +246,9 @@ int main(int argc, char * argv[]) {
   drift.SetDistanceSteps(1.e-4);
   drift.SetSensor(&sensor);
 
+  ViewSignal vSignal;
+  vSignal.SetSensor(&sensor);
+  constexpr bool plotSignal = true;
 
   // Define Hcenter values that match the LUT
   std::vector<double> hcenter_values;
@@ -279,7 +303,8 @@ for (unsigned int j = 0; j < nEvents; ++j) {
         drift.DriftHole(x0, y0, zposition, t0);
       }
     }
-
+    if (!plotSignal) continue;
+    vSignal.PlotSignal("sign");
     // sensor.ConvoluteSignals();
 
     outfile << "Hcenter = " << Hcenter_um << " μm  " << "x0 = " << x0*1e4 << " μm  " << "y0 = " << y0*1e4 << " μm  "<<"TPA_carriers = "<<nesum<<" q_total = "<<nesum * ElementaryCharge<<" fC\n";
